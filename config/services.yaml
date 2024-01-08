@@ -1,0 +1,17 @@
+services:
+    _defaults:
+        autowire:      true
+        autoconfigure: true
+### Map entities
+doctrine:
+    orm:
+        auto_generate_proxy_classes: '%kernel.debug%'
+        naming_strategy:             doctrine.orm.naming_strategy.underscore
+        auto_mapping:                true
+        mappings:
+            BoltAllinoneaccessibility:
+                is_bundle: false
+                type:      annotation
+                dir:       '%kernel.project_dir%/vendor/skynettechnologies/bolt-allinoneaccessibility/src/Entity'
+                prefix:    'Skynettechnologies\BoltAllinoneaccessibility'
+                alias:     BoltAllinoneaccessibility
