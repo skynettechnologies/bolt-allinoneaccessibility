@@ -1,5 +1,5 @@
 function mylicensekey() {
-    var license_key_change = $("#field-setting_license_key").val();
+    var license_key_change = $("#field-settings_license_key").val();
     var server_name = window.location.hostname;
 
     var license_key_valid = null;
@@ -44,12 +44,12 @@ function mylicensekey() {
 }
 
 setTimeout(function() {
-    var iDiv = document.createElement("div");
-    iDiv.id = 'hide_title';
-    document.querySelector('.admin__header--title__prefix').append(iDiv);
-    var hide_aioa_title = document.getElementById("hide_title").style.display = "none";
-    var license_key_check = document.querySelector('input[name="field-setting_license_key"]').value;
-
+    var x = document.getElementsByClassName("admin__header--title")[0];
+    x.id="menu"
+    document.getElementById("menu").style.display = "none";
+    // var hide_ada_label = document.getElementById("hide_bar").style.display = "none";
+    var license_key_check = document.querySelector('input[name="field-settings_license_key"]').value;
+    console.log("Checking_js file",x);
     mylicensekey(license_key_check);
     if (license_key_check !== "") {
         document.getElementById("icon_type").style.display = "";
@@ -67,23 +67,23 @@ setTimeout(function() {
     //     document.getElementById("icon_size").style.display = "none";
     // }
     // var selected = document.querySelector('input[type=radio][name="PL3bbeec384_aioa_icon_size"]:checked').value;
-    var getSelectedValueaioa_icontype_value = document.querySelector('input[name="field-setting_allinoneaccessibility_icon_type"]:checked').value;
+    var getSelectedValueaioa_icontype_value = document.querySelector('input[name="field-settings_allinoneaccessibility_icon_type"]:checked').value;
     //var resImage = getSelectedValueaioa_icontype_value.replace("_", "-");
     var resImage= getSelectedValueaioa_icontype_value.replace(new RegExp('_', 'g'), '-');
     var resImage= "https://www.skynettechnologies.com/sites/default/files/python/"+resImage+".svg";
-    var aioa_big_icon_id=document.querySelector('input[name="field-setting_aioa_icon_size"][value="aioa-big-icon"]').id;
+    var aioa_big_icon_id=document.querySelector('input[name="field-settings_aioa_icon_size"][value="aioa-big-icon"]').id;
     document.querySelector('label[for="'+aioa_big_icon_id+'"]').innerHTML='<img src="'+resImage+'" alt="Big" title="Big" width="75" height="75" style="background-color:#6f42c1;border-radius:100%">';
 
-    var aioa_medium_icon_id=document.querySelector('input[name="field-setting_aioa_icon_size"][value="aioa-medium-icon"]').id;
+    var aioa_medium_icon_id=document.querySelector('input[name="field-settings_aioa_icon_size"][value="aioa-medium-icon"]').id;
     document.querySelector('label[for="'+aioa_medium_icon_id+'"]').innerHTML='<img src="'+resImage+'" alt="Medium" title="Medium" width="65" height="65" style="background-color:#6f42c1;border-radius:100%">';
 
-    var aioa_default_icon_id=document.querySelector('input[name="field-setting_aioa_icon_size"][value="aioa-default-icon"]').id;
+    var aioa_default_icon_id=document.querySelector('input[name="field-settings_aioa_icon_size"][value="aioa-default-icon"]').id;
     document.querySelector('label[for="'+aioa_default_icon_id+'"]').innerHTML='<img src="'+resImage+'" alt="Default" title="Default" width="55" height="55" style="background-color:#6f42c1;border-radius:100%">';
 
-    var aioa_small_icon_id=document.querySelector('input[name="field-setting_aioa_icon_size"][value="aioa-small-icon"]').id;
+    var aioa_small_icon_id=document.querySelector('input[name="field-settings_aioa_icon_size"][value="aioa-small-icon"]').id;
     document.querySelector('label[for="'+aioa_small_icon_id+'"]').innerHTML='<img src="'+resImage+'" alt="Small" title="Small" width="45" height="45" style="background-color:#6f42c1;border-radius:100%">';
 
-    var aioa_extra_small_icon_id=document.querySelector('input[name="field-setting_aioa_icon_size"][value="aioa-extra-small-icon"]').id;
+    var aioa_extra_small_icon_id=document.querySelector('input[name="field-settings_aioa_icon_size"][value="aioa-extra-small-icon"]').id;
     document.querySelector('label[for="'+aioa_extra_small_icon_id+'"]').innerHTML='<img src="'+resImage+'" alt="Extra Small" title="Extra Small" width="35" height="35" style="background-color:#6f42c1;border-radius:100%">';
 },500);
 
@@ -101,13 +101,13 @@ setTimeout(function() {
 // }
 
 setTimeout(() => {
-    const sizeOptions = document.querySelectorAll('input[name="field-setting_aioa_icon_size"]').value;
-    const sizeOptionsImg = document.querySelectorAll('input[name="field-setting_aioa_icon_size"] + label img');
-    const typeOptions = document.querySelectorAll('input[name="field-setting_allinoneaccessibility_icon_type"]');
+    const sizeOptions = document.querySelectorAll('input[name="field-settings_aioa_icon_size"]').value;
+    const sizeOptionsImg = document.querySelectorAll('input[name="field-settings_aioa_icon_size"] + label img');
+    const typeOptions = document.querySelectorAll('input[name="field-settings_allinoneaccessibility_icon_type"]');
     typeOptions.forEach(option => {
         option.addEventListener("click", (event) => {
             sizeOptionsImg.forEach(option2 => {
-                var ico_type = document.querySelector('input[name="field-setting_allinoneaccessibility_icon_type"]:checked').value;
+                var ico_type = document.querySelector('input[name="field-settings_allinoneaccessibility_icon_type"]:checked').value;
                 option2.setAttribute("src", "https://skynettechnologies.com/sites/default/files/python/" + ico_type + ".svg");
             });
         });
