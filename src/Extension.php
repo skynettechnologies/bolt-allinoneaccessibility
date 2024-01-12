@@ -17,7 +17,7 @@ class Extension extends BaseExtension
 
     public function getName(): string
     {
-        return 'Bolt Extension to add the Allinoneaccessibility FieldType';
+        return 'All in One Accessibility';
     }
 
     /**

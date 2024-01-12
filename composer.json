@@ -1,7 +1,7 @@
 {
   "name": "skynettechnologies/bolt-allinoneaccessibility",
   "description": "All in One Accessibility widget improves Bolt CMS website ADA compliance and browser experience for ADA,WCAG 2.1, Section 508, Australian DDA, European EAA EN 301 549, UK Equality Act (EA), Israeli Standard 5568,California Unruh, Ontario AODA, Canada ACA, German BITV, and France RGAA Standards.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "type": "bolt-extension",
   "license": "MIT",
   "authors": [
@@ -31,12 +31,12 @@
   },
   "autoload": {
     "psr-4": {
-      "Skynettechnologies\\BoltAllinoneaccessibility\\": "src/"
+      "SkynetTechnologies\\BoltAllinoneaccessibility\\": "src/"
     }
   },
   "minimum-stability": "dev",
   "prefer-stable": true,
   "extra": {
-    "entrypoint": "Skynettechnologies\\BoltAllinoneaccessibility\\Extension"
+    "entrypoint": "SkynetTechnologies\\BoltAllinoneaccessibility\\Extension"
   }
 }
