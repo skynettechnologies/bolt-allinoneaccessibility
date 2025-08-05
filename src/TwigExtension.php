@@ -1,89 +1,47 @@
 <?php
 
-declare(strict_types=1);
-
 namespace Skynettechnologies\BoltAllinoneaccessibility;
 
-use Bolt\Common\Json;
-use Symfony\Component\DependencyInjection\Container;
 use Twig\Extension\AbstractExtension;
-use Twig\TwigFilter;
 use Twig\TwigFunction;
-use Doctrine\DBAL\DriverManager;
-use Doctrine\DBAL\Exception;
-use Psr\Container\ContainerInterface;
+use Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface;
 
+/**
+ * @method  array
+ */
 class TwigExtension extends AbstractExtension
 {
-    /** @var BoltAllinoneaccessibilityConfig */
-    private  $allinoneaccessibilityConfig;
+    private ParameterBagInterface $params;
 
-    /** @var Container */
-    private $container;
-
-    public function __construct(BoltAllinoneaccessibilityConfig $allinoneaccessibilityConfig, ContainerInterface $container)
+    public function __construct(ParameterBagInterface $params)
     {
-        $this->allinoneaccessibilityConfig = $allinoneaccessibilityConfig;
-        $this->container = $container;
+        $this->params = $params;
     }
 
-    /**
-     * This functions create a custom TWIG function `allinoneaccessibility_settings()`
-     *
-     * @return TwigFunction[]
-     */
     public function getFunctions(): array
     {
-        $safe = [
-            'is_safe' => ['html'],
-        ];
-
         return [
-            new TwigFunction('allinoneaccessibility_settings', [$this, 'allinoneaccessibilitySettings'], $safe),
+            new TwigFunction('aioa_script', [$this, 'renderWidgetScript'], ['is_safe' => ['html']]),
         ];
     }
 
-    public function getFilters()
+    public function renderWidgetScript(): string
     {
-        return [
-            'allinoneaccessibility_decode_json' => new TwigFilter('allinoneaccessibility_decode_json', [$this, 'allinoneaccessibilityDecodeJson']),
-        ];
+        // Example: You can define this URL in your config/services.yaml or another config file
+        $scriptUrl = $this->params->get('aioa.widget_url') ?? '';
+
+        if (!$scriptUrl) {
+            return '<!-- AIOA Widget URL not configured -->';
+        }
+
+        return sprintf(
+            '<script>(function(d){var s = d.createElement("script");s.setAttribute("data-account", "aioa");s.setAttribute("src", "%s");(d.body || d.head).appendChild(s);})(document);</script>',
+            htmlspecialchars($scriptUrl)
+        );
     }
 
-    public function allinoneaccessibilitySettings(): string
+    public function __call(string $name, array $arguments)
     {
-        $settings = $this->allinoneaccessibilityConfig->getConfig();
-        return Json::json_encode($settings, JSON_HEX_QUOT | JSON_HEX_APOS);
-    }
-
-    /**
-     * @throws \Psr\Container\ContainerExceptionInterface
-     * @throws \Psr\Container\NotFoundExceptionInterface
-     */
-    public function allinoneaccessibilityDecodeJson($str): object
-    {
-//        $settings = $this->allinoneaccessibilityConfig->getConfig();
-        $select = "SELECT * FROM aioawidget_setting";
-        $data = $this->container->get('database_connection')->executeQuery($select)->fetch();
-        if (!$data){
-          $data = [
-                'license_key' => '',
-                'color' => '#420083',
-                'position' => 'bottom_right',
-                'icon_type' => 'aioa-icon-type-1',
-                'icon_size' => 'aioa-default-icon',
-                'is_valid_key' => 0,
-              ];
-        }
-        if (empty($str)) {
-            return (object) [
-                'license_key' => $data['license_key'],
-                'color' => $data['color'],
-                'position' => $data['position'],
-                'icon_type' => $data['icon_type'],
-                'icon_size' => $data['icon_size'],
-            ];
-        }
-        return Json::json_decode($str);
+        // TODO: Implement @method  array
     }
 }

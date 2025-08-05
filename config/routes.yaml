@@ -1,0 +1,4 @@
+bolt_allinoneaccessibility:
+    path: /allinoneaccessibility
+    controller: Skynettechnologies\BoltAllinoneaccessibility\Controller\AllinoneaccessibilityController::index
+    methods: [GET]

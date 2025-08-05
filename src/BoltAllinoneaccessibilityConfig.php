@@ -67,47 +67,5 @@ class BoltAllinoneaccessibilityConfig
 
     public function getDefaults(): array
     {
-//        $qb = $this->getQueryBuilder();
-//        $conn = $qb->getEntityManager()->getConnection();
-//        $data = $conn ->createQueryBuilder()
-//            ->select("*")
-//            ->from("aioawidget_setting");
-//        $results = $data->getQuery()->getResult();
-//        $user = $this->get('doctrine.orm.default_entity_manager')
-//            ->getEntityManager()
-//            ->createQueryBuilder()
-//            ->select('*')
-//            ->from('aioawidget_setting')
-//            ->getQuery()->execute();
-//        $conn = $this->getExtension()->getObjectManager()->getConnection();
-//        $data = $conn
-//            ->prepare("Select * from aioawidget_setting")
-//            ->executeQuery()
-//            ->fetch();
-
-//        if ($data){
-//            $getdata = [
-//                'license_key' => $data['license_key'],
-//                'color' => $data['color'],
-//                'position' => $data['position'],
-//                'icon_type' => $data['icon_type'],
-//                'icon_size' => $data['icon_size'],
-//                'is_valid_key' => $data['is_valid_key'],
-//                '_csrf_token' => $this->csrfTokenManager->getToken('bolt_allinoneaccessibility')
-//                    ->getValue(),
-//            ];
-//        }
-//        else{
-            $getdata = [
-                'license_key' => '',
-                'color' => '#40628',
-                'position' => 'bottom_right',
-                'icon_type' => 'aioa-icon-type-1',
-                'icon_size' => 'aioa-default-icon',
-                'is_valid_key' => 0,
-                '_csrf_token' => $this->csrfTokenManager->getToken('bolt_allinoneaccessibility')->getValue()
-            ];
-        //}
-        return array_merge($getdata);
     }
 }

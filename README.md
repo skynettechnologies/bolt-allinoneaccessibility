@@ -201,7 +201,10 @@ To configure the widget, access the Admin Panel and head to the **All in One Acc
 
 ## Documentation
 
-- **[All in One Accessibility - User Guide](https://www.dropbox.com/s/de41n4xm9zjwxix/All-in-One-Accessibility-PRO-App-Usage-and-Functionality.pdf?dl=0)**
+- **[Purchase Bolt CMS All in One Accessibility](https://www.skynettechnologies.com/bolt-cms-website-accessibility)**
+- **[How to install All in One Accessibility Addon on Bolt CMS](https://www.skynettechnologies.com/blog/bolt-cms-web-accessibility-widget-installation)**
+- **[All in One Accessibility - Features Guide](https://www.skynettechnologies.com/sites/default/files/accessibility-widget-features-list.pdf)**
+
 
 ## Submit a Support Request
 
