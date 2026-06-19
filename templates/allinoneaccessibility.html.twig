@@ -449,7 +449,7 @@
                                                     <label for="exact-icon-size" class="form-label">Select exact icon size:</label>
                                                     <div class="input-group mb-2">
                                                         <input type="number" class="form-control" style="height:auto" id="widget_icon_size_custom"
-                                                               name="widget_icon_size_custom" oninput="this.value = Math.min(Math.max(this.value, 0), 150)"
+                                                               name="widget_icon_size_custom"
                                                                value="{% if record.widget_icon_size_custom %}{{ record.widget_icon_size_custom }}{% else %}20{% endif %}"
                                                                min="20" max="150" aria-label="Value in pixels" aria-describedby="size-value-input_1" />
                                                         <span class="input-group-text" style="height:auto" id="size-value-input_1">PX</span>

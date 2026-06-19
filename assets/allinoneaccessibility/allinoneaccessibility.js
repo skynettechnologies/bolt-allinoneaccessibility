@@ -1,12 +1,114 @@
 document.addEventListener('DOMContentLoaded', function () {
+
+  // --------------------------------------
+  // DOMAIN / USER INFO
+  // --------------------------------------
+  const domainWithPort = window.location.hostname;
+  const domain_name = domainWithPort.split(':')[0];
+  const domain = domain_name;
+
+  const urlParams = new URLSearchParams(window.location.search);
+  const username = urlParams.get("username") || domain || "Dear Customer";
+  const useremail = urlParams.get("email") || `no-reply@${domain}`;
+  const website_name = btoa(domain);
+
+  // --------------------------------------
+  // LOADER
+  // --------------------------------------
   const loader = document.getElementById('loader');
-  // Function to show loader
   function showLoader() {
-    loader.style.display = 'flex';
+    if (loader) loader.style.display = 'flex';
   }
-  // Function to hide loader
   function hideLoader() {
-    loader.style.display = 'none';
+    if (loader) loader.style.display = 'none';
+  }
+
+  // --------------------------------------
+  // EU COUNTRY DETECTION
+  // --------------------------------------
+  async function getCountryData() {
+    const sessionData = sessionStorage.getItem('visitor_data');
+    if (sessionData) {
+      return JSON.parse(sessionData);
+    }
+
+    try {
+      const response = await fetch('https://ipapi.co/json/');
+      if (!response.ok) throw new Error('Failed to fetch visitor data');
+
+      const data = await response.json();
+      const visitorData = {
+        country_code: data.country_code || 'Unknown',
+        in_eu: data.in_eu ?? false
+      };
+
+      sessionStorage.setItem('visitor_data', JSON.stringify(visitorData));
+      return visitorData;
+
+    } catch (error) {
+      console.error('EU lookup failed:', error);
+      return {
+        country_code: 'Unknown',
+        in_eu: false
+      };
+    }
+  }
+
+  // --------------------------------------
+  // ADD USER DOMAIN API
+  // --------------------------------------
+  async function fetchAddUserDomain() {
+    try {
+      const visitorData = await getCountryData();
+      const no_required_eu = visitorData.in_eu ? 0 : 1;
+      console.log(visitorData,no_required_eu);
+      const arrDetails = {
+        name: username,
+        email: useremail,
+        company_name: '',
+        website: website_name,
+        package_type: "free-widget",
+        start_date: new Date().toISOString(),
+        end_date: '',
+        price: '',
+        discount_price: '0',
+        platform: 'Bolt',
+        api_key: '',
+        is_trial_period: '',
+        is_free_widget: '1',
+        bill_address: '',
+        country: visitorData.country_code,
+        state: '',
+        city: '',
+        post_code: '',
+        transaction_id: '',
+        subscr_id: '',
+        payment_source: '',
+        no_required_eu: no_required_eu
+      };
+
+      const response = await fetch(
+        "https://ada.skynettechnologies.us/api/add-user-domain",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(arrDetails)
+        }
+      );
+
+      const data = await response.json();
+      console.log("add-user-domain response:", data);
+
+    } catch (error) {
+      console.error("add-user-domain failed:", error);
+    }
+  }
+
+  // --------------------------------------
+  // CALL ADD USER DOMAIN ONCE
+  // --------------------------------------
+  if (domain_name) {
+    fetchAddUserDomain();
   }
   // Function to populate form fields dynamically from fetched settings
   function setWidgetData(widgetPosition, widgetColor, iconType, iconSize, widgetSize, widgetIconSizeCustom, is_widget_custom_size, is_widget_custom_position, widgetPositionTop, widgetPositionBottom, widgetPositionLeft, widgetPositionRight) {
@@ -223,8 +325,6 @@ document.addEventListener('DOMContentLoaded', function () {
     widgetPositionLeft: "",
     widgetPositionRight: ""
   };
-  const domainWithPort = window.location.host; // e.g. "127.0.0.1:8000"
-  const domain_name = domainWithPort.split(':')[0]; // gets "127.0.0.1"
   if (domain_name && domain_name !== '') {
     // Show loader before fetching data
     showLoader();
@@ -255,10 +355,10 @@ document.addEventListener('DOMContentLoaded', function () {
         const widgetIconSizeCustom = data.Data?.widget_icon_size_custom || defaultValues.widgetIconSizeCustom;
         const is_widget_custom_size = data.Data?.is_widget_custom_size || defaultValues.is_widget_custom_size;
         const is_widget_custom_position = data.Data?.is_widget_custom_position || defaultValues.is_widget_custom_position;
-        const widgetPositionTop = data.Data?.widget_position_top ?? defaultValues.widgetPositionTop;
-        const widgetPositionBottom = data.Data?.widget_position_bottom ?? defaultValues.widgetPositionBottom;
-        const widgetPositionLeft = data.Data?.widget_position_left ?? defaultValues.widgetPositionLeft;
-        const widgetPositionRight = data.Data?.widget_position_right ?? defaultValues.widgetPositionRight;
+        const widgetPositionTop = data.Data?.widget_position_top;
+        const widgetPositionBottom = data.Data?.widget_position_bottom;
+        const widgetPositionLeft = data.Data?.widget_position_left;
+        const widgetPositionRight = data.Data?.widget_position_right;
         console.log(widgetColor,is_widget_custom_size,is_widget_custom_position);
         setWidgetData(
           widgetPosition,
@@ -301,12 +401,6 @@ document.addEventListener('DOMContentLoaded', function () {
       defaultValues.widgetPositionRight
     );
   }
-  // $('.colorpicker').on('input', function () {
-  //     $('.colorint').val(this.value);
-  // });
-  // $('.colorint').on('input', function () {
-  //     $('.colorpicker').val(this.value);
-  // });
 
   $(".icon_type").change(function () {
     var icon_type = $(this).val(); // Get the selected icon type value

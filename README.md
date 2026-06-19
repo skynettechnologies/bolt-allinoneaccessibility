@@ -1,8 +1,8 @@
-# All in One Accessibility®: Bolt CMS Plugin
+# All in One Accessibility®:Bolt CMS Plugin
 
 ## Enhance Your Website's Accessibility with All in One Accessibility®
 
-**Did you know?** Your website's accessibility can make or break your audience's experience. With the **All in One Accessibility AI Free Accessibility Widget**, you can instantly boost your site's inclusivity and support over **140+ languages**! Experience the power of **23 essential features** in our free version and take the first step towards creating a better web for everyone.
+**Did you know?** Your website's accessibility can make or break your audience's experience. With the **All in One Accessibility AI Free Accessibility Widget**, you can instantly boost your site's inclusivity and support over **190+ languages**! Experience the power of **23 essential features** in our free version and take the first step towards creating a better web for everyone.
 
 ### Why All in One Accessibility®?
 
@@ -108,15 +108,14 @@ By implementing the widget, you’re not only enhancing user experience but also
 
 ### Built for Excellence
 
-- Adheres to **ISO 9001:2015** & **ISO 27001:2013** standards.
+- Adheres to **ISO 9001:2015** & **ISO 27001:2022** standards.
 - Fully compliant with **GDPR** and **COPPA** regulations.
 - Proud member of **W3C** and the **International Association of Accessibility Professionals (IAAP)**.
 
 ### Upgrade to Unlock Premium Features
 
-**Why stop at 23 features?** Unlock over **70+ advanced features** with our **paid subscription** and take your website’s accessibility to the next level. Compare the benefits of Free vs. Paid versions **[here](https://www.skynettechnologies.com/all-in-one-accessibility/features)**.
-
-Checkout the steps for upgrading **[Free to Paid Widget Upgrade Steps](https://www.skynettechnologies.com/blog/upgrade-all-in-one-accessibility-free-widget-to-paid-version#free-paid-version).**
+**Why stop at 23 features?** Unlock over **90 advanced features** with our **paid subscription** and take your website’s accessibility to the next level. Compare the benefits of Free vs. Paid versions **[here](https://www.skynettechnologies.com/all-in-one-accessibility/features)**.
+Checkout the steps for upgrading **[Free to Paid Widget](https://www.skynettechnologies.com/blog/upgrade-from-all-in-one-accessibility-free-widget-to-premium-version).**
 
 ### Start Your Accessibility Journey Today
 
@@ -126,7 +125,7 @@ Try it risk-free with our **10-day free trial**! Don’t wait, experience the be
 
 For more details, visit **[All in One Accessibility®](https://www.skynettechnologies.com/all-in-one-accessibility)** and transform your digital presence.
 
-### Supported Languages (140+ Languages)
+### Supported Languages (190+ Languages):
 
 English (USA), English (UK), English (Australian), English (Canadian), English (South Africa), Español, Español (Mexicano), Deutsch, عربى, Português, Português (Brazil), 日本語, Français, Italiano, Polski, Pусский, 中文, 中文 (Traditional), עִברִית, Magyar, Slovenčina, Suomenkieli, Türkçe, Ελληνικά, Latinus, Български, Català, Čeština, Dansk, Nederlands, हिंदी, Bahasa Indonesia, 한국인, Lietuvių, Bahasa Melayu, Norsk, Română, Slovenščina, Svenska, แบบไทย, Українська, Việt Nam, বাঙালি, සිංහල, አማርኛ, Hmoob, မြန်မာ, Eesti keel, latviešu, Cрпски, Hrvatski, ქართული, ʻŌlelo Hawaiʻi, Cymraeg, Cebuano, Samoa, Kreyòl ayisyen, Føroyskt, Crnogorski, Azerbaijani, Euskara, Tagalog, Galego, Norsk Bokmål, فارسی, ਪੰਜਾਬੀ, shqiptare, Hայերեն, অসমীয়া, Aymara, Bamanankan, беларускі, bosanski, Corsu, ދިވެހި, Esperanto, Eʋegbe, Frisian, guarani, ગુજરાતી, Hausa, íslenskur, Igbo, Gaeilge, basa jawa, ಕನ್ನಡ, қазақ, ខ្មែរ, Kinyarwanda, Kurdî, Кыргызча, ພາສາລາວ, Lingala, Luganda, lëtzebuergesch, македонски, Malagasy, മലയാളം, Malti, Maori, मराठी, Монгол, नेपाली, Sea, ଓଡିଆ, Afaan Oromoo, پښتو, Runasimi, संस्कृत, Gàidhlig na h-Alba, Sesotho, Shona, سنڌي, Soomaali, basa Sunda, kiswahili, тоҷикӣ, தமிழ், Татар, తెలుగు, ትግሪኛ, Tsonga, Türkmenler, Ride, اردو, ئۇيغۇر, o'zbek, isiXhosa, יידיש, Yoruba, Zulu, भोजपुरी, डोगरी, कोंकणी, Kurdî, Krio, मैथिली, Meiteilon, Mizo tawng, Sepedi, Ilocano, دری.
 
@@ -187,7 +186,6 @@ To avoid CORS policy issues, ensure the following URLs are allowed in your websi
 | `https://*.gstatic.com`            | Fonts APIs                                   | Custom Fonts                     |
 | `https://vlibras.gov.br`           | VLibras - Brazilian Sign Language Service    | Sign Language                    |
 
-
 ## Instructions
 
 1. Update your server's CORS configuration to include these URLs.
@@ -195,16 +193,15 @@ To avoid CORS policy issues, ensure the following URLs are allowed in your websi
 3. Verify the application functionality by testing requests to these domains.
 4. If issues persist, consult the documentation for CORS configuration guidance.
 
-## Configuration
+## Live Demo
 
-To configure the widget, access the Admin Panel and head to the **All in One Accessibility** menu in the dashboard. From there, you can register **[here](https://ada.skynettechnologies.us/trial-subscription)** with 10 Days free trial.
+https://boltcms.skynettechnologies.us/
 
 ## Documentation
 
-- **[Purchase Bolt CMS All in One Accessibility](https://www.skynettechnologies.com/bolt-cms-website-accessibility)**
-- **[How to install All in One Accessibility Addon on Bolt CMS](https://www.skynettechnologies.com/blog/bolt-cms-web-accessibility-widget-installation)**
+- **[Purchase Bolt All in One Accessibility](https://www.skynettechnologies.com/bolt-ada-compliant-widget)**
+- **[How to install All in One Accessibility Addon on Bolt](https://www.skynettechnologies.com/blog/bolt-web-accessibility-widget-installation)**
 - **[All in One Accessibility - Features Guide](https://www.skynettechnologies.com/sites/default/files/accessibility-widget-features-list.pdf)**
-
 
 ## Submit a Support Request
 
@@ -218,13 +215,12 @@ Alternatively, you can send an email to our support team:
 ## Accessibility Paid Add-on Services
 
 ### **[Manual Accessibility Audit Report](https://www.skynettechnologies.com/all-in-one-accessibility/addons#manual-accessibility-audit-report)**
-
 Enhance inclusivity and user experience by evaluating your website’s accessibility by accessibility experts.
-WCAG 2.0 / WCAG 2.1 / WCAG 2.2 Level AA conformance testing.
-Automated, semi-automated testing.
-Manual testing.
-Simple before-after UI/UX recommendations on how to fix the issues.
-Comprehensive audit report.
+WCAG 2.0 / WCAG 2.1 / WCAG 2.2 Level AA conformance testing
+Automated, semi-automated testing
+Manual testing
+Simple before-after UI/UX recommendations on how to fix the issues
+Comprehensive audit report
 
 ### **[Manual Accessibility Remediation](https://www.skynettechnologies.com/all-in-one-accessibility/addons#manual-accessibility-remediation)**
 Enhance website accessibility and inclusivity with our Manual Accessibility Remediation add-on. This service includes fixing accessibility issues and thorough remediation of your website manually. Our experts ensure accessibility with WCAG standards, improve user experience for those with disabilities, and provide a detailed report on the improvements made.
@@ -232,8 +228,8 @@ Enhance website accessibility and inclusivity with our Manual Accessibility Reme
 ### **[PDF/Document Accessibility Remediation](https://www.skynettechnologies.com/all-in-one-accessibility/addons#pdf-document-remediation)**
 The PDF / Document Remediation provides a list of inaccessible PDFs and remediated PDFs from where you can request PDF remediation service.
  
-### **[VPAT Report/Accessibility Conformance Report(ACR)](https://www.skynettechnologies.com/all-in-one-accessibility/addons#vpat-acr-report)**
-The Voluntary Product Accessibility Template (VPAT), also known as an ACR (Accessibility Conformance Report) starts with an audit and provides current details for an accessible website, application, or any other digital assets.
+ ### **[VPAT Report/Accessibility Conformance Report(ACR)](https://www.skynettechnologies.com/all-in-one-accessibility/addons#vpat-acr-report)**
+ The Voluntary Product Accessibility Template (VPAT), also known as an ACR (Accessibility Conformance Report) starts with an audit and provides current details for an accessible website, application, or any other digital assets.
 
 ## Accessibility Widget Paid Add-ons
 
@@ -241,7 +237,7 @@ The Voluntary Product Accessibility Template (VPAT), also known as an ACR (Acces
 Remove the Skynet technologies logo as well as all of the footer links, popups, report a problem link and more for full white label control.
 
 ### **[Live Site Translations](https://www.skynettechnologies.com/all-in-one-accessibility/addons#accessibility-widget-add-ons)**
-Translate your site into over 140 languages instantly to enhance accessibility for non-native speakers, individuals with language acquisition difficulties, and those with learning disabilities.
+Translate your site into over 190 languages instantly to enhance accessibility for non-native speakers, individuals with language acquisition difficulties, and those with learning disabilities.
 
 ###  **[Modify Accessibility Menu](https://www.skynettechnologies.com/all-in-one-accessibility/addons#accessibility-widget-add-ons)**
 Build and fine-tune your widget with the Modify Menu option. Reorder, remove and restructure the widget buttons to fit your users’ specific accessibility needs.
@@ -268,9 +264,15 @@ For more details, Please visit **[Partnership Opportunities Page](https://www.sk
 
 ![App Screenshot](https://www.skynettechnologies.com/sites/default/files/screenshot-4-free.jpg?v=4)
 
+![App Screenshot](https://www.skynettechnologies.com/sites/default/files/screenshot-5-free.jpg?v=4)
+
+![App Screenshot](https://www.skynettechnologies.com/sites/default/files/screenshot-6-free.jpg?v=4)
+
+![App Screenshot](https://www.skynettechnologies.com/sites/default/files/screenshot-7-free.jpg?v=4)
+
 ## Video
 
-[![All in One Accessibility](https://img.youtube.com/vi/X70XtvGyvSs/0.jpg)](https://youtu.be/X70XtvGyvSs)
+[![All in One Accessibility](https://img.youtube.com/vi/X70XtvGyvSs/0.jpg)](https://www.youtube.com/watch?v=X70XtvGyvSs)
 
 ## Credits
 

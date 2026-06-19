@@ -1,12 +1,12 @@
 {
   "name": "skynettechnologies/bolt-allinoneaccessibility",
   "description": "Quick Web Accessibility Implementation with All In One Accessibility!",
-  "version": "1.5",
+  "version": "dev-main",
   "type": "bolt-extension",
   "license": "MIT",
   "authors": [
     {
-      "name": "Rajesh Bhimani",
+      "name": "Skynet Technologies USA LLC",
       "email": "developer3@skynettechnologies.com"
     }
   ],
